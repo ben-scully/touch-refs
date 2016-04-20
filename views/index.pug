@@ -1,0 +1,24 @@
+//- views/index.pug
+doctype html
+html
+  head
+    title Bens Node Authentication
+    link(href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css", rel='stylesheet')
+    link(href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css", rel='stylesheet')
+    style
+      body { padding-top:80px; }
+
+body
+  div.container
+    div.jumbotron.text-center
+      h1
+        span(class='fa fa-lock')
+        | Bens - Node Authentication
+      p Login or Register with:
+
+      a(href="/login" class="btn btn-default")
+        span(class="fa fa-user")
+        | Local Login
+      a(href="/signup" class="btn btn-default")
+        span(class="fa fa-user")
+        | Local Signup

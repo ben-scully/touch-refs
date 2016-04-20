@@ -1,0 +1,37 @@
+//- views/login.pug
+doctype html
+html
+  head
+    title Bens Node Authentication
+    link(href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css", rel='stylesheet')
+    link(href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css", rel='stylesheet')
+    style
+      body { padding-top:80px; }
+
+body
+div.container
+div.col-sm-6.col-sm-offset-3
+
+    h1
+      span(class="fa fa-sign-in")
+      | Login
+  
+    if message.length > 0
+      div.alert.alert-danger #{message}
+      
+    //- LOGIN FORM
+    form(action='/login', method='post')
+      .form-group
+        label Email
+        input.form-control(type='text', name='email')
+      .form-group
+        label Password
+        input.form-control(type='password', name='password')
+      button.btn.btn-warning.btn-lg(type='submit') Login
+
+      hr
+
+      p Need an account? 
+        a(href="/signup") Signup
+      p Or go 
+        a(href="/") Home
